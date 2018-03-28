@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+
+    <style>
+    .blue  { background-color: #33FFFF}
+    </style>
+
+</head>
+<body>
+    <h1>Hover Event</h1>
+     <ul id="hover-list">
+         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, alias quisquam! Temporibus, quidem libero accusamus provident sint voluptatum nulla, ratione voluptatibus blanditiis dicta quo dolores modi nobis. Eum, laboriosam magni.</li>
+     </ul>
+
+     <il>
+         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi impedit facilis itaque nostrum. Nemo, consectetur? Eius aliquid vitae, dolor sint, pariatur corrupti deserunt, non ea eaque facere autem molestiae consectetur.</li>
+     </il>
+</body>
+    <!-- Then add the functions inside head since it is a script-->
+    <script>
+        $('#hover-list li').on('mouseenter' , function() {
+            $(this).addClass('blue');
+        });
+
+    $('#hover-list li').on('mouseout' , function() {
+            $(this).removeClass('blue');
+        });
+    </script>
+</html>

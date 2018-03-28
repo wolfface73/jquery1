@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+
+    <!-- <style>.bold { font-weight: bold }</style> -->
+</head>
+<body>
+    <h1>addClass Function</h1>
+
+    <button id='btn_bold'>Bold the spans</button>
+
+    <p><span>jQuery</span> uses an intersting concept to make its code short and simple. For those familiar with OOP, this concept should be rather 
+    straighforwar. Every method within <span>jQuery</span> returns the query object itself, allowing you to 'chain' upon it.</p>
+</body>
+    <!-- Then add the functions inside head since it is a script-->
+    <script>
+     $('#btn_bold').on('click', function(){
+        // $('p span').addClass('bold');
+        $('p span').css('font-weight', 'bold');
+     });
+    </script>
+</html>

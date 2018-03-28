@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Image Test</title>
+</head>
+<body>
+    <h1>Images Test</h1>
+</body>
+    <script>
+        for (var i=0; i<=8; i++) {
+            $('<img/>', {
+                src:'https://www.nationalgeographic.com/content/dam/animals/pictures/mammals/d/domestic-dog/domestic-dog.adapt.885.1.jpg',
+                alt:'dog',
+                style:'float:right; width:250px',
+                click:function(e){$(this).css('opacity', '.50');}
+            }).appendTo($('body'))
+        }
+    </script>
+</html>

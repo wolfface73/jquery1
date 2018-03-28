@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+    
+    <title>Chained Selectors Alert</title>
+</head>
+<body>
+        <!--Ex.7 -->
+        <p><b>********* Exercise 7 *********</b></p>
+        <a href ="http://bing.com">Click <b>me</b></a>
+        <br/>
+        <a href ="http://google.com" class="special">No, Click me!</a>
+        <br/>
+        <a href ="http://cnn.com">No, me, me, me!</a>
+        <br/>
+</body>
+    <script>
+        $('a').has('b').click(function(){
+            alert("You had something bold in the link!")
+            return false;
+        })
+
+        $('a').not('.special').click(function(){
+            alert("You weren't special !!");
+            return false;
+        });
+
+        $('a').last().on('click', function(){
+            alert("You were the last link accepted !!!");
+            return false;
+        });
+
+        $('a').eq(1).on('click', function(){
+            alert("You were the 2nd link accepted !!!!");
+            return false;
+        });
+    </script>
+</html>
