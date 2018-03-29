@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Change Style - Toggle three times</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.js"></script>
+
+    <script>
+        $(function () { // ready function 
+            $("li").toggle(
+                function () {
+                    $(this).css({
+                        'list-style-type': 'disc',
+                        color: 'blue'
+                    });
+                },
+                function () {
+                    $(this).css({
+                        'list-style-type': 'disc',
+                        color: 'red'
+                    });
+                },
+                function () {
+                    $(this).css({
+                        'list-style-type': '',
+                        color: ''
+                    });
+                });
+        }); // end ready function
+    </script>
+</head>
+
+<body>
+    <h1>Change Style - Toggle three times</h1>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+    </ul>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+    </ul>
+</body>
+
+</html>

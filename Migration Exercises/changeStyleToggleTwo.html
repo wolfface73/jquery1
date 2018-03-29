@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Change Style - Toggle twice</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.js"></script>
+    <style>
+        .highlight {
+            background-color: #FFFF66
+        }
+    </style>
+
+    <script>
+        function addHighlight() {
+            $("p span").addClass("highlight");
+            $("#btn-callbacks").text("Plain callbacks");
+        }
+        function removeHighlight() {
+            $("p span").removeClass("highlight");
+            $("#btn-callbacks").text("Highlight callbacks");
+        }
+        $(function () { // jQuery document ready function
+            $("#btn-callbacks").toggle(addHighlight, removeHighlight);
+        }); // end jQuery document ready function
+    </script>
+</head>
+
+<body>
+    <h1>Change Style - Toggle twice</h1>
+    <button id="btn-callbacks">Highlight callback words</button>
+    <p>A
+        <span>callback</span> is a function that is passed as an argument to another function and is executed after its parent
+        function has completed. The special thing about a
+        <span>callback</span> is that functions that appear after the "parent" can execute before the
+        <span>callback</span> executes. Another important thing to know is how to properly pass the
+        <span>callback</span>. This is where I have often forgotten the proper syntax.</p>
+</body>
+
+</html>

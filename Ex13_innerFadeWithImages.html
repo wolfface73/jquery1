@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+    <script src="js/jquery.innerfade.js" type="text/javascript"></script>
+
+    <style>
+        .innerFadeClass {}
+
+        #innerFadeElement img {
+            max-height: 250px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Ex13 - Inner Fade</h1>
+    
+    <div id='innerFadeElement'>
+        <div><img src='https://wallpaperbrowse.com/media/images/promo_5.png' /></div>
+        <div><img src='https://wallpaperbrowse.com/media/images/750814.jpg' /></div>
+        <div><img src='https://wallpaperbrowse.com/media/images/random-things-you-thought-you-never-see2.jpg' /></div>
+        <div><img src='https://wallpaperbrowse.com/media/images/750826.gif' /></div>
+        <div><img src='https://wallpaperbrowse.com/media/images/750913.jpg' /></div>
+    </div>
+
+</body>
+    <!-- Then add the functions inside head since it is a script-->
+    <script>
+        $('#innerFadeElement').innerfade({
+            speed: 2000,
+            animationtype: 'fade', 
+            timeout: 4000,
+            type: 'sequence',
+            containerheight: '250px',
+            runningclass: 'innerFadeClass'
+        })
+    </script>
+</html>

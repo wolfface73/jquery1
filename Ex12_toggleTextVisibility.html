@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+
+</head>
+<body>
+    <h1>Ready Function</h1>
+    <button id="button1">hide / Show</button>
+    <div id='div1'>
+        <p stype="color:red">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, natus quaerat aut, asperiores vero aliquam tempore sint praesentium reprehenderit optio autem vitae, aspernatur numquam recusandae omnis deleniti. Quas, nihil ducimus?</span>
+            <span>Officiis dolores sunt impedit illum temporibus omnis minus dolore, ullam voluptatibus tempore, consectetur distinctio. Iure repellendus adipisci vel rerum, tempore ex ratione! Harum praesentium et necessitatibus voluptate dolorum est blanditiis.</span>
+            <span>Perferendis autem ipsum iste saepe est. Quaerat fugit quidem molestiae tempore, nisi iusto nostrum exercitationem? Rem, labore assumenda, laboriosam magni neque sit quasi rerum autem qui eveniet explicabo libero magnam.</span>
+        </p>
+
+        <p style="display:none">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus necessitatibus consequatur molestiae impedit minima minus ipsum sint reprehenderit, sit, tempora repellendus exercitationem fugiat corrupti ad. Corporis illo atque commodi.</span>
+            <span>Error unde soluta, aut quod quidem delectus? Eligendi distinctio id expedita accusamus culpa neque illo nemo est sapiente, quas asperiores, animi possimus ipsa quidem maiores, illum rem harum quam eum.</span>
+            <span>Atque nisi laborum at accusantium fugiat qui ad numquam placeat nihil in sit aspernatur, accusamus facere error commodi odit? Quas nemo omnis, beatae numquam id consequatur molestiae error iure sint?</span>
+            <span>Voluptatem inventore perspiciatis mollitia facilis temporibus maiores, sequi quam quidem rem aliquid voluptates expedita voluptatum exercitationem nulla accusamus corrupti nisi illum harum! Nemo quas rem pariatur quia deleniti dolores obcaecati!</span>
+            <span>Eaque incidunt temporibus ducimus distinctio sequi vero velit impedit nobis cumque ipsum ad voluptatibus totam itaque in minima illum tenetur, quibusdam iste! Corrupti saepe, atque fugiat dignissimos maiores explicabo aut.</span>
+        </p>
+    </div>
+</body>
+    <!-- Then add the functions inside head since it is a script-->
+    <script>
+        $('#button1').on('click', function(){
+            $('#div1').find('p').toggle(1000);
+        })
+    </script>
+</html>

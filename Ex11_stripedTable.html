@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+
+    <style>
+        tr.table-striped {
+            background-color: #ecf6fc;
+        }
+
+        tr.table-row-highlight {
+            background-color: #bcd4ec;
+        }
+
+        td, th {
+            padding: 8px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Striped Table - Ex 11</h1>
+    <!-- table.striped>(thead>tr>th*4>lorem)+(tbody>tr*3>td*4>lorem) -->
+     
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus aut soluta! Neque quasi alias at dolore qui cum a dolorum animi quisquam? Modi pariatur dolor maxime eum sed odio?</th>
+                <th>Ex illum odit omnis qui soluta! Autem est perspiciatis eos consequatur architecto ad nihil aliquid officiis fuga, excepturi optio iusto quas repudiandae, nesciunt sed. Accusamus qui praesentium amet minima sequi.</th>
+                <th>Deleniti eius vitae, eos aliquam placeat alias eum quibusdam facere officia culpa. Amet, nesciunt itaque! Fugiat dolorum sed necessitatibus sit amet soluta magnam hic animi quae ut vel, obcaecati eius.</th>
+                <th>Labore provident iusto magni magnam recusandae quisquam voluptatum quam id fugiat consequuntur quidem asperiores dolorem commodi quo quibusdam ea suscipit earum cumque, molestiae tenetur ab! Optio laboriosam repellendus eligendi qui?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quidem dolorum tempora totam alias quod vero dolor obcaecati. Nobis earum iusto sequi pariatur dolorem fuga eos nisi ullam tempora illum?</td>
+                <td>Enim, animi. Exercitationem iusto reiciendis soluta non. Sequi veniam omnis ratione rem unde tenetur perferendis, pariatur totam ex excepturi minus recusandae eos odit iste quos expedita adipisci, alias ab itaque.</td>
+                <td>Vel tenetur quisquam et voluptatum itaque officia sequi, iure sint magnam soluta vitae totam aperiam animi, culpa quaerat eum error accusantium doloribus! Magni, dignissimos aperiam nemo eius culpa itaque voluptates.</td>
+                <td>Provident odio alias non placeat magnam sint maiores earum fugit laudantium libero dignissimos, labore voluptate ad consequatur consectetur dolor delectus quaerat amet iusto iure ut voluptatum accusantium architecto? Voluptatum, temporibus.</td>
+            </tr>
+            <tr>
+                <td>Reiciendis in earum, quod laborum aliquid sunt. Facere natus, sapiente aliquid consequuntur ab similique, architecto magni culpa, vel nihil ad officiis a rem cupiditate fuga asperiores saepe hic? Beatae, neque.</td>
+                <td>Ratione voluptas odio vero fuga dolorem, quia nemo est, eligendi dolores, vel consectetur explicabo. Necessitatibus nobis quis exercitationem odit quibusdam reprehenderit ut alias temporibus neque, recusandae ipsam, soluta laboriosam tempore!</td>
+                <td>Quisquam quia exercitationem porro, iste unde molestiae quibusdam error omnis, esse qui excepturi iusto assumenda. Quaerat praesentium velit voluptates quo error eaque est corporis autem illo, aliquid facere sequi unde?</td>
+                <td>Laborum earum eius id ea, magnam debitis ipsum aliquid! Aspernatur fugiat, molestiae distinctio labore tenetur repudiandae non, quaerat totam quos obcaecati aliquam dignissimos vitae harum quis dolorum itaque dolores rerum?</td>
+            </tr>
+            <tr>
+                <td>Maiores nemo sed tempore corrupti dolor. Fugit exercitationem, ipsam neque inventore corporis possimus dolorem blanditiis eveniet itaque nostrum hic voluptas laudantium, vitae tempore harum id rerum earum repudiandae rem assumenda.</td>
+                <td>Sapiente voluptas error voluptatum. Recusandae tempora aliquam mollitia, repellat dicta adipisci incidunt nihil officiis eveniet a veritatis officia consectetur dolorem doloremque laboriosam nemo impedit dignissimos, vel nobis iure. Pariatur, saepe.</td>
+                <td>Ad rerum quae iusto? Deleniti adipisci delectus error laboriosam eveniet necessitatibus aliquid explicabo temporibus, eum similique animi nemo quos excepturi asperiores odit assumenda rerum vel. Maxime corrupti esse sequi eius?</td>
+                <td>Commodi laborum voluptatem, totam magnam reiciendis ea quis at ipsam iusto deserunt esse repudiandae molestias voluptate harum fugit quos dicta omnis libero numquam incidunt nostrum. Id corrupti quaerat commodi. Ut?</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+    <!-- Then add the functions inside head since it is a script-->
+    <script>
+        $('table.striped tr:odd').addClass('table-striped')
+        $('table.striped tr')
+            .on('mouseover', function(){
+                $(this).addClass('table-row-highlight');
+            })
+
+            .on('mouseout', function(){
+                $(this).removeClass('table-row-highlight');
+            })
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- First load the jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+    <h1>Append Text - Ex10</h1>
+    <h2>To Do</h2>
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illo odit amet voluptates obcaecati deserunt exercitationem ipsam, omnis ullam eos quibusdam velit dignissimos deleniti facilis unde quod, dolor eveniet! Quisquam.</li>
+    </ul>
+</body>
+    <!-- Then add the functions inside head since it is a script-->
+    <script>
+        $('li').on('click', function(){
+            if(!$(this).data('clicked')){
+                $(this).append('<b> Completed </b>'
+                + $.datepicker.formatDate('mm-dd-yy', new Date()) );
+                $(this).data('clicked', true)
+            }
+        });
+    </script>
+</html>
